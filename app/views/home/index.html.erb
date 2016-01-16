@@ -1,0 +1,26 @@
+<!-- Example row of columns -->
+		
+<div class="row">
+  <div class="table-responsive">
+     <table class="table table-hover">
+  		<thead>
+  				<tr>
+    				<th>Tables</th>        				
+  				</tr>
+  		</thead>
+  		<tbody>
+  			<% unless @results.empty? %>
+  	    <% @results.each do |tname| %>
+  	      <tr>				        
+  	        <td><%= link_to tname, {:controller => "home", :action => "list", :table_name => tname}%></td>		        
+  	      </tr>
+  	    <% end %>
+  	  <% else %>
+  	    <tr>
+  	      <td colspan="0">Nothing to see here move along please</td>
+  	    </tr>
+  	  <% end %>
+  		</tbody>
+     </table>
+  </div>
+</div>    
