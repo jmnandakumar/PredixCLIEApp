@@ -1,0 +1,39 @@
+<div class = "page-header">
+   <h1>
+      Point Configuration 
+      <small>from table</small>
+   </h1>   
+</div> 
+<div class="row">
+   <table class="table table-bordered">
+      <thead>
+          <tr>
+            <th>Point Name</th>
+            <th>Point Type</th>
+            <th>Point Origin</th>
+            <th>Resource ID</th>
+            <th>Initial Value</th>
+            <th>Alarm Enabled</th>                
+          </tr>
+      </thead>
+      <tbody>
+        <% unless @points.empty? %>
+        <% @points.each do |point| %>
+          <tr>            
+            <td><%= link_to point.pt_id, point %></td>
+            <td><%=point.pt_type%></td>
+            <td><%=point.pt_origin%></td>
+            <td><%=point.resource_id%></td>
+            <td><%=point.init_val%></td>
+            <td><%=point.alm_enable%></td>           
+          </tr>
+        <% end %>
+        <% else %>
+        <tr>
+          <td colspan="0">Nothing to see here move along please</td>
+        </tr>
+        <% end %>           
+      </tbody>
+     </table> 
+     <p><%= link_to "Add Point", new_point_path, class: "btn btn-default" %></p>
+  </div>

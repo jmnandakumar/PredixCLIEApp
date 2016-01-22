@@ -1,0 +1,58 @@
+<h1>
+      Point Create 
+      <small>(add a new point to your configuration)</small>
+   </h1>
+<div class="row">
+	<%= form_for @point do |p| %>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="pt_id">Point ID</label>
+				<%= p.text_field :pt_id,:placeholder => "Point ID" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="pt_type">Point Type</label>
+				<%= p.text_field :pt_type,:placeholder => "Point Type" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="pt_origin">Point Origin</label>
+				<%= p.text_field :pt_origin,:placeholder => "Point Origin" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="resource_id">Resource ID</label>
+				<%= p.text_field :resource_id,:placeholder => "Resource ID" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="init_val">Initial Value</label>
+				<%= p.text_field :init_val,:placeholder => "Initial Value" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<fieldset>
+			<br/>
+			<div class="col-xs-4">
+				<label for="alm_enable">Alarm Enable</label>
+				<%= p.text_field :alm_enable,:placeholder => "Alarm Enable" ,:class => "form-control" %>
+			</div>
+		</fieldset>
+		<div>
+			<br/>
+			<fieldset>
+				<div class="col-xs-4">
+					<%= p.submit "Add New Point", class: "btn btn-default" %>
+				</div>
+			</fieldset>
+		</div>
+	<%end%>
+</div>

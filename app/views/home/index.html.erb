@@ -12,7 +12,7 @@
   			<% unless @results.empty? %>
   	    <% @results.each do |tname| %>
   	      <tr>				        
-  	        <td><%= link_to tname, {:controller => "home", :action => "list", :table_name => tname}%></td>		        
+  	        <td><%= link_to tname, {:controller => "points", :action => "index", :table_name => tname}%></td>		        
   	      </tr>
   	    <% end %>
   	  <% else %>
